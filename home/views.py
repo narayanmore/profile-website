@@ -18,7 +18,7 @@ def funhome(request):
             res=contact(from_email=email,subject=subject,message=message)  #for database save
             res.save()
             try:
-                send_mail(subject, message, email, ['morenarayan045@gmail.com'])
+                send_mail(subject, message, email, ['narayanmore2525@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('http://localhost:8000/home/')
