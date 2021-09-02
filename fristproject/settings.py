@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
-import dj_database_url
-from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'fristproject.urls'
@@ -132,7 +130,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS=[STATIC_DIR,]
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 # email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 #DEFAULT_FROM_EMAIL = 'will@learndjango.com'
@@ -143,4 +141,4 @@ EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
 #EMAIL_USE_SSL=False
 
-django_heroku.settings(locals())
+
