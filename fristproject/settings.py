@@ -132,13 +132,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS=[STATIC_DIR,]
 #STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 # email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 #DEFAULT_FROM_EMAIL = 'will@learndjango.com'
-EMAIL_HOST = 'smtp.gmail.com' # new
-EMAIL_HOST_USER = 'narayanmore2525@gmail.com' # new
-EMAIL_HOST_PASSWORD = 'Ganray@123' # new
-EMAIL_PORT = 587 # new
-EMAIL_USE_TLS = True # new
+#EMAIL_HOST = 'smtp.gmail.com' # new
+#EMAIL_HOST_USER = 'narayanmore2525@gmail.com' # new
+#EMAIL_HOST_PASSWORD = 'Ganray@123' # new
+#EMAIL_PORT = 587 # new
+#EMAIL_USE_TLS = True # new
 #EMAIL_USE_SSL=False
 
 

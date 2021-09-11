@@ -19,11 +19,11 @@ def funhome(request):
             res=contact(from_email=email,subject=subject,message=message)  #for database save
             res.save()
             messages.info(request,'message send successfully')
-            try:
-                send_mail(subject, message, email, ['narayanmore2525@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('http://localhost:8000/home/')
+            #try:
+             #   send_mail(subject, message, email, ['narayanmore2525@gmail.com'])
+            #except BadHeaderError:
+            #    return HttpResponse('Invalid header found.')
+            #return redirect('http://localhost:8000/home/')
 
     res= render(request, 'home/home.html', {'form': form})
     return res
