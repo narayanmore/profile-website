@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from django.contrib import messages
 from .forms import ContactForm
 from home.models import contact
 
@@ -17,6 +18,7 @@ def funhome(request):
             message = form.cleaned_data['message']
             res=contact(from_email=email,subject=subject,message=message)  #for database save
             res.save()
+            messages.info(request,'message send successfully')
             try:
                 send_mail(subject, message, email, ['narayanmore2525@gmail.com'])
             except BadHeaderError:
